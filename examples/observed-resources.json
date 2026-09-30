@@ -1,0 +1,19 @@
+{
+  "region": "ap-northeast-1",
+  "gatewayId": "litellm-vpc-demo-demogateway",
+  "targetId": "DEMO000001",
+  "instanceId": "i-00000000000000004",
+  "privateIp": "172.31.59.78",
+  "vpcId": "vpc-0000000000000000c",
+  "subnetIds": [
+    "subnet-0000000000000000a",
+    "subnet-00000000000000009"
+  ],
+  "domain": "litellm-vpc-demo.example.com",
+  "latticeSecurityGroup": "sg-00000000000000008",
+  "albSecurityGroup": "sg-00000000000000007",
+  "ec2SecurityGroup": "sg-00000000000000006",
+  "targetStatus": "READY",
+  "artifactDirectory": "artifacts",
+  "note": "Anonymized historical resource identifiers; do not copy this file into a live deployment state."
+}

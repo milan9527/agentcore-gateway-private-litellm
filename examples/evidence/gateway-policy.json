@@ -1,0 +1,36 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bedrock-agentcore:GetWorkloadAccessToken"
+      ],
+      "Resource": [
+        "arn:aws:bedrock-agentcore:ap-northeast-1:123456789012:workload-identity-directory/default",
+        "arn:aws:bedrock-agentcore:ap-northeast-1:123456789012:workload-identity-directory/default/workload-identity/litellm-vpc-demo-*"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "bedrock-agentcore:GetResourceApiKey"
+      ],
+      "Resource": [
+        "arn:aws:bedrock-agentcore:ap-northeast-1:123456789012:token-vault/default/apikeycredentialprovider/litellm-vpc-demo",
+        "arn:aws:bedrock-agentcore:ap-northeast-1:123456789012:workload-identity-directory/default/workload-identity/litellm-vpc-demo-demogateway",
+        "arn:aws:bedrock-agentcore:ap-northeast-1:123456789012:workload-identity-directory/default",
+        "arn:aws:bedrock-agentcore:ap-northeast-1:123456789012:token-vault/default"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "secretsmanager:GetSecretValue"
+      ],
+      "Resource": [
+        "arn:aws:secretsmanager:ap-northeast-1:123456789012:secret:litellm-vpc-demo/litellm-master-key-ChLp48"
+      ]
+    }
+  ]
+}

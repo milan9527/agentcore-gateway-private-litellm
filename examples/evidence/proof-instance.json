@@ -1,0 +1,32 @@
+{
+  "Reservations": [
+    {
+      "Instances": [
+        {
+          "InstanceId": "i-00000000000000004",
+          "PrivateIpAddress": "172.31.59.78",
+          "VpcId": "vpc-0000000000000000c",
+          "SubnetId": "subnet-0000000000000000a",
+          "State": {
+            "Code": 16,
+            "Name": "running"
+          },
+          "SecurityGroups": [
+            {
+              "GroupId": "sg-00000000000000006",
+              "GroupName": "litellm-vpc-demo-ec2"
+            }
+          ],
+          "MetadataOptions": {
+            "State": "applied",
+            "HttpTokens": "required",
+            "HttpPutResponseHopLimit": 2,
+            "HttpEndpoint": "enabled",
+            "HttpProtocolIpv6": "disabled",
+            "InstanceMetadataTags": "disabled"
+          }
+        }
+      ]
+    }
+  ]
+}

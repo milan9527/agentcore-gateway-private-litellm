@@ -1,0 +1,132 @@
+{
+  "SecurityGroups": [
+    {
+      "GroupId": "sg-00000000000000006",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "litellm-vpc-demo"
+        },
+        {
+          "Key": "Purpose",
+          "Value": "AgentCorePrivateInferenceTest"
+        }
+      ],
+      "VpcId": "vpc-0000000000000000c",
+      "SecurityGroupArn": "arn:aws:ec2:ap-northeast-1:123456789012:security-group/sg-00000000000000006",
+      "OwnerId": "123456789012",
+      "GroupName": "litellm-vpc-demo-ec2",
+      "Description": "litellm-vpc-demo ec2",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 4001,
+          "ToPort": 4001,
+          "UserIdGroupPairs": [
+            {
+              "Description": "litellm-vpc-demo",
+              "UserId": "123456789012",
+              "GroupId": "sg-00000000000000007"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    },
+    {
+      "GroupId": "sg-00000000000000008",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Purpose",
+          "Value": "AgentCorePrivateInferenceTest"
+        },
+        {
+          "Key": "Project",
+          "Value": "litellm-vpc-demo"
+        }
+      ],
+      "VpcId": "vpc-0000000000000000c",
+      "SecurityGroupArn": "arn:aws:ec2:ap-northeast-1:123456789012:security-group/sg-00000000000000008",
+      "OwnerId": "123456789012",
+      "GroupName": "litellm-vpc-demo-lattice",
+      "Description": "litellm-vpc-demo lattice",
+      "IpPermissions": []
+    },
+    {
+      "GroupId": "sg-00000000000000007",
+      "IpPermissionsEgress": [
+        {
+          "IpProtocol": "-1",
+          "UserIdGroupPairs": [],
+          "IpRanges": [
+            {
+              "CidrIp": "0.0.0.0/0"
+            }
+          ],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ],
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "litellm-vpc-demo"
+        },
+        {
+          "Key": "Purpose",
+          "Value": "AgentCorePrivateInferenceTest"
+        }
+      ],
+      "VpcId": "vpc-0000000000000000c",
+      "SecurityGroupArn": "arn:aws:ec2:ap-northeast-1:123456789012:security-group/sg-00000000000000007",
+      "OwnerId": "123456789012",
+      "GroupName": "litellm-vpc-demo-alb",
+      "Description": "litellm-vpc-demo alb",
+      "IpPermissions": [
+        {
+          "IpProtocol": "tcp",
+          "FromPort": 443,
+          "ToPort": 443,
+          "UserIdGroupPairs": [
+            {
+              "Description": "litellm-vpc-demo",
+              "UserId": "123456789012",
+              "GroupId": "sg-00000000000000008"
+            }
+          ],
+          "IpRanges": [],
+          "Ipv6Ranges": [],
+          "PrefixListIds": []
+        }
+      ]
+    }
+  ]
+}

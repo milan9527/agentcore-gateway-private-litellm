@@ -1,0 +1,104 @@
+{
+  "NetworkInterfaces": [
+    {
+      "Attachment": {
+        "AttachmentId": "ela-attach-0acf3c40288d5b761",
+        "DeleteOnTermination": false,
+        "DeviceIndex": 1,
+        "InstanceOwnerId": "amazon-aws",
+        "Status": "attached"
+      },
+      "AvailabilityZone": "ap-northeast-1c",
+      "Description": "Resource Gateway Interface rgw-00000000000000005",
+      "Groups": [
+        {
+          "GroupId": "sg-00000000000000008",
+          "GroupName": "litellm-vpc-demo-lattice"
+        }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [],
+      "MacAddress": "0a:ff:d5:3b:15:65",
+      "NetworkInterfaceId": "eni-00000000000000003",
+      "OwnerId": "123456789012",
+      "PrivateDnsName": "ip-172-31-59-48.ap-northeast-1.compute.internal",
+      "PublicDnsName": "",
+      "PrivateIpAddress": "172.31.59.48",
+      "PrivateIpAddresses": [
+        {
+          "Primary": true,
+          "PrivateDnsName": "ip-172-31-59-48.ap-northeast-1.compute.internal",
+          "PrivateIpAddress": "172.31.59.48"
+        }
+      ],
+      "RequesterId": "063144966088",
+      "RequesterManaged": true,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-0000000000000000a",
+      "TagSet": [
+        {
+          "Key": "VpcLatticeManaged",
+          "Value": "true"
+        }
+      ],
+      "VpcId": "vpc-0000000000000000c",
+      "DenyAllIgwTraffic": true,
+      "Operator": {
+        "Managed": false,
+        "HiddenByDefault": false
+      },
+      "AvailabilityZoneId": "apne1-az1"
+    },
+    {
+      "Attachment": {
+        "AttachmentId": "ela-attach-0708c70ec8d11a433",
+        "DeleteOnTermination": false,
+        "DeviceIndex": 1,
+        "InstanceOwnerId": "amazon-aws",
+        "Status": "attached"
+      },
+      "AvailabilityZone": "ap-northeast-1d",
+      "Description": "Resource Gateway Interface rgw-00000000000000005",
+      "Groups": [
+        {
+          "GroupId": "sg-00000000000000008",
+          "GroupName": "litellm-vpc-demo-lattice"
+        }
+      ],
+      "InterfaceType": "interface",
+      "Ipv6Addresses": [],
+      "MacAddress": "0e:ff:c6:72:0a:17",
+      "NetworkInterfaceId": "eni-00000000000000001",
+      "OwnerId": "123456789012",
+      "PrivateDnsName": "ip-172-31-132-175.ap-northeast-1.compute.internal",
+      "PublicDnsName": "",
+      "PrivateIpAddress": "172.31.132.175",
+      "PrivateIpAddresses": [
+        {
+          "Primary": true,
+          "PrivateDnsName": "ip-172-31-132-175.ap-northeast-1.compute.internal",
+          "PrivateIpAddress": "172.31.132.175"
+        }
+      ],
+      "RequesterId": "063144966088",
+      "RequesterManaged": true,
+      "SourceDestCheck": true,
+      "Status": "in-use",
+      "SubnetId": "subnet-00000000000000009",
+      "TagSet": [
+        {
+          "Key": "VpcLatticeManaged",
+          "Value": "true"
+        }
+      ],
+      "VpcId": "vpc-0000000000000000c",
+      "DenyAllIgwTraffic": true,
+      "Operator": {
+        "Managed": false,
+        "HiddenByDefault": false
+      },
+      "AvailabilityZoneId": "apne1-az2"
+    }
+  ]
+}

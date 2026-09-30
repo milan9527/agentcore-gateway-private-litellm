@@ -1,0 +1,24 @@
+{
+  "probeId": "network-c1f3ba9b5238",
+  "sentAt": "2026-09-30T06:46:22.991155+00:00",
+  "durationSeconds": 0.8843748060171492,
+  "url": "https://litellm-vpc-demo-demogateway.gateway.bedrock-agentcore.ap-northeast-1.amazonaws.com/inference/v1/chat/completions",
+  "request": {
+    "model": "litellm-private/private-network-check",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with exactly this text and nothing else: PRIVATE_PATH_OK_network-c1f3ba9b5238"
+      }
+    ],
+    "max_tokens": 256,
+    "stream": false
+  },
+  "httpStatus": 200,
+  "headers": {
+    "Date": "Wed, 30 Sep 2026 06:46:23 GMT",
+    "Content-Type": "application/json",
+    "x-amzn-RequestId": "aad4aad7-b4ba-4b05-9c0d-2223c60b8792"
+  },
+  "body": "{\"id\": \"chatcmpl-b8d761c9-0553-4762-a4ae-d1e6fbb01df9\", \"created\": 1790750783, \"model\": \"private-network-check\", \"object\": \"chat.completion\", \"choices\": [{\"finish_reason\": \"stop\", \"index\": 0, \"message\": {\"content\": \"LITELLM_PRIVATE_NETWORK_OK\", \"role\": \"assistant\"}}], \"usage\": {\"completion_tokens\": 20, \"prompt_tokens\": 10, \"total_tokens\": 30}}"
+}

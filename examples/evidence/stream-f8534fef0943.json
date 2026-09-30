@@ -1,0 +1,24 @@
+{
+  "probeId": "stream-f8534fef0943",
+  "sentAt": "2026-09-30T06:46:25.223464+00:00",
+  "durationSeconds": 1.195595437020529,
+  "url": "https://litellm-vpc-demo-demogateway.gateway.bedrock-agentcore.ap-northeast-1.amazonaws.com/inference/v1/chat/completions",
+  "request": {
+    "model": "litellm-private/private-gpt-oss",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with exactly this text and nothing else: PRIVATE_PATH_OK_stream-f8534fef0943"
+      }
+    ],
+    "max_tokens": 256,
+    "stream": true
+  },
+  "httpStatus": 200,
+  "headers": {
+    "Date": "Wed, 30 Sep 2026 06:46:26 GMT",
+    "Content-Type": "text/event-stream; charset=utf-8",
+    "x-amzn-RequestId": "dde661c0-67b4-462d-b7e6-c75e3c911409"
+  },
+  "body": "data: {\"id\": \"chatcmpl-4d0b2f58-e49e-478f-b817-e1cb504c1fb7\", \"created\": 1790750786, \"model\": \"private-gpt-oss\", \"object\": \"chat.completion.chunk\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\", \"role\": \"assistant\"}}]}\n\ndata: {\"id\": \"chatcmpl-4d0b2f58-e49e-478f-b817-e1cb504c1fb7\", \"created\": 1790750786, \"model\": \"private-gpt-oss\", \"object\": \"chat.completion.chunk\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}}]}\n\ndata: {\"id\": \"chatcmpl-4d0b2f58-e49e-478f-b817-e1cb504c1fb7\", \"created\": 1790750786, \"model\": \"private-gpt-oss\", \"object\": \"chat.completion.chunk\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"\"}}]}\n\ndata: {\"id\": \"chatcmpl-4d0b2f58-e49e-478f-b817-e1cb504c1fb7\", \"created\": 1790750786, \"model\": \"private-gpt-oss\", \"object\": \"chat.completion.chunk\", \"choices\": [{\"index\": 0, \"delta\": {\"content\": \"PRIVATE_PATH_OK_stream-f8534fef0943\"}}]}\n\ndata: {\"id\": \"chatcmpl-4d0b2f58-e49e-478f-b817-e1cb504c1fb7\", \"created\": 1790750786, \"model\": \"private-gpt-oss\", \"object\": \"chat.completion.chunk\", \"choices\": [{\"finish_reason\": \"stop\", \"index\": 0, \"delta\": {}}]}\n\ndata: [DONE]\n\n"
+}

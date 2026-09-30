@@ -1,0 +1,7 @@
+{
+  "routingDomain": "internal-litellm-vpc-demo-1234567890.ap-northeast-1.elb.amazonaws.com",
+  "ipv4": [
+    "172.31.142.76",
+    "172.31.58.217"
+  ]
+}

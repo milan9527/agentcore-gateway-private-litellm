@@ -1,0 +1,4 @@
+{
+  "Status": "Success",
+  "StandardOutputContent": "{\"headerFormat\": \"single_space\", \"httpStatus\": 200, \"error\": null}\n{\"headerFormat\": \"double_space\", \"httpStatus\": 400, \"error\": {\"message\": \"No connected db.\", \"type\": \"no_db_connection\", \"param\": null, \"code\": \"400\"}}\n"
+}

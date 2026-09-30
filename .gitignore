@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+deployment-config.json
+private-litellm-state.json
+artifacts/
+*.pem
+*.key
+*token*.txt
+*.tar.gz

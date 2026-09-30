@@ -1,0 +1,24 @@
+{
+  "probeId": "inference-bed48286cef1",
+  "sentAt": "2026-09-30T06:46:23.876051+00:00",
+  "durationSeconds": 1.3469428739626892,
+  "url": "https://litellm-vpc-demo-demogateway.gateway.bedrock-agentcore.ap-northeast-1.amazonaws.com/inference/v1/chat/completions",
+  "request": {
+    "model": "litellm-private/private-gpt-oss",
+    "messages": [
+      {
+        "role": "user",
+        "content": "Reply with exactly this text and nothing else: PRIVATE_PATH_OK_inference-bed48286cef1"
+      }
+    ],
+    "max_tokens": 256,
+    "stream": false
+  },
+  "httpStatus": 200,
+  "headers": {
+    "Date": "Wed, 30 Sep 2026 06:46:25 GMT",
+    "Content-Type": "application/json",
+    "x-amzn-RequestId": "3709ef15-7bf2-471e-a1e7-02659b0adbe4"
+  },
+  "body": "{\"id\": \"chatcmpl-7775d134-6521-4e2e-9c7c-612a853416d2\", \"created\": 1790750785, \"model\": \"private-gpt-oss\", \"object\": \"chat.completion\", \"choices\": [{\"finish_reason\": \"stop\", \"index\": 0, \"message\": {\"content\": \"PRIVATE_PATH_OK_inference-bed48286cef1\", \"role\": \"assistant\"}}], \"usage\": {\"completion_tokens\": 70, \"prompt_tokens\": 86, \"total_tokens\": 156, \"completion_tokens_details\": {\"reasoning_tokens\": 50, \"text_tokens\": 20}, \"prompt_tokens_details\": {\"cache_write_tokens\": 0, \"cached_tokens\": 0, \"text_tokens\": 86, \"cache_creation_tokens\": 0}, \"cache_creation_input_tokens\": 0, \"cache_read_input_tokens\": 0}}"
+}

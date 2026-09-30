@@ -1,0 +1,33 @@
+name: Validate demo
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r requirements.txt
+      - name: Validate Python and shell syntax
+        run: |
+          python -m compileall -q .
+          for script in *.sh; do bash -n "$script"; done
+          python deploy_private_litellm.py --help
+      - name: Replay recorded private-path evidence
+        run: python replay_evidence.py
+      - name: Validate target request against the SDK schema
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from botocore.session import get_session
+          from botocore.validate import validate_parameters
+          request = json.loads(Path("examples/evidence/create-target-corrected-request.json").read_text())
+          model = get_session().get_service_model("bedrock-agentcore-control")
+          validate_parameters(request, model.operation_model("CreateGatewayTarget").input_shape)
+          PY

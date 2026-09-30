@@ -1,0 +1,83 @@
+{
+  "gatewayDataPlaneVerified": true,
+  "scope": "AgentCore Gateway -> VPC Lattice -> internal ALB -> EC2 LiteLLM",
+  "upstreamLimitation": "LiteLLM -> Bedrock still uses the existing NAT/public service endpoint",
+  "gatewayId": "litellm-vpc-demo-demogateway",
+  "targetId": "DEMO000001",
+  "instanceId": "i-00000000000000004",
+  "privateIp": "172.31.59.78",
+  "instancePublicIp": null,
+  "loadBalancerScheme": "internal",
+  "latticeEniIps": [
+    "172.31.132.175",
+    "172.31.59.48"
+  ],
+  "tests": [
+    {
+      "test": "network",
+      "probeId": "network-c1f3ba9b5238",
+      "httpStatus": 200,
+      "sourceLatticeIp": [
+        "172.31.59.48"
+      ],
+      "backendLog": {
+        "auth_check": "exact_match",
+        "time": "2026-09-30T06:46:23+00:00",
+        "peer": "172.31.58.217",
+        "forwarded_for": "172.31.59.48",
+        "probe_id": "network-c1f3ba9b5238",
+        "method": "POST",
+        "uri": "/v1/chat/completions",
+        "status": 200,
+        "upstream_status": "200",
+        "seconds": 0.011
+      },
+      "content": "LITELLM_PRIVATE_NETWORK_OK",
+      "durationSeconds": 0.8843748060171492
+    },
+    {
+      "test": "inference",
+      "probeId": "inference-bed48286cef1",
+      "httpStatus": 200,
+      "sourceLatticeIp": [
+        "172.31.132.175"
+      ],
+      "backendLog": {
+        "auth_check": "exact_match",
+        "time": "2026-09-30T06:46:25+00:00",
+        "peer": "172.31.58.217",
+        "forwarded_for": "172.31.132.175",
+        "probe_id": "inference-bed48286cef1",
+        "method": "POST",
+        "uri": "/v1/chat/completions",
+        "status": 200,
+        "upstream_status": "200",
+        "seconds": 0.486
+      },
+      "content": "PRIVATE_PATH_OK_inference-bed48286cef1",
+      "durationSeconds": 1.3469428739626892
+    },
+    {
+      "test": "stream",
+      "probeId": "stream-f8534fef0943",
+      "httpStatus": 200,
+      "sourceLatticeIp": [
+        "172.31.132.175"
+      ],
+      "backendLog": {
+        "auth_check": "exact_match",
+        "time": "2026-09-30T06:46:26+00:00",
+        "peer": "172.31.58.217",
+        "forwarded_for": "172.31.132.175",
+        "probe_id": "stream-f8534fef0943",
+        "method": "POST",
+        "uri": "/v1/chat/completions",
+        "status": 200,
+        "upstream_status": "200",
+        "seconds": 0.605
+      },
+      "content": "PRIVATE_PATH_OK_stream-f8534fef0943",
+      "durationSeconds": 1.195595437020529
+    }
+  ]
+}

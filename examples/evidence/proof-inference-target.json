@@ -1,0 +1,68 @@
+{
+  "gatewayArn": "arn:aws:bedrock-agentcore:ap-northeast-1:123456789012:gateway/litellm-vpc-demo-demogateway",
+  "targetId": "DEMO000001",
+  "createdAt": "2026-09-30 06:41:30.300732+00:00",
+  "updatedAt": "2026-09-30 06:44:22.957834+00:00",
+  "status": "READY",
+  "name": "litellm-private",
+  "description": "Private-only LiteLLM with API_KEY injection",
+  "targetConfiguration": {
+    "inference": {
+      "provider": {
+        "endpoint": "https://litellm-vpc-demo.example.com",
+        "operations": [
+          {
+            "path": "/v1/chat/completions",
+            "models": [
+              {
+                "model": "private-gpt-oss"
+              },
+              {
+                "model": "private-network-check"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "credentialProviderConfigurations": [
+    {
+      "credentialProviderType": "API_KEY",
+      "credentialProvider": {
+        "apiKeyCredentialProvider": {
+          "providerArn": "arn:aws:bedrock-agentcore:ap-northeast-1:123456789012:token-vault/default/apikeycredentialprovider/litellm-vpc-demo",
+          "credentialParameterName": "Authorization",
+          "credentialPrefix": "Bearer",
+          "credentialLocation": "HEADER"
+        }
+      }
+    }
+  ],
+  "lastSynchronizedAt": "2026-09-30 06:44:22.660191+00:00",
+  "metadataConfiguration": {
+    "allowedRequestHeaders": [
+      "x-probe-id"
+    ]
+  },
+  "privateEndpoint": {
+    "managedVpcResource": {
+      "vpcIdentifier": "vpc-0000000000000000c",
+      "subnetIds": [
+        "subnet-0000000000000000a",
+        "subnet-00000000000000009"
+      ],
+      "endpointIpAddressType": "IPV4",
+      "securityGroupIds": [
+        "sg-00000000000000008"
+      ],
+      "routingDomain": "internal-litellm-vpc-demo-1234567890.ap-northeast-1.elb.amazonaws.com"
+    }
+  },
+  "privateEndpointManagedResources": [
+    {
+      "domain": "internal-litellm-vpc-demo-1234567890.ap-northeast-1.elb.amazonaws.com",
+      "resourceGatewayArn": "arn:aws:vpc-lattice:ap-northeast-1:123456789012:resourcegateway/rgw-00000000000000005"
+    }
+  ]
+}
